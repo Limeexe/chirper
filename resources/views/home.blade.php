@@ -32,5 +32,11 @@
             </div>
         </div>
     </main>
+
+    <footer class="justify-center p-5 text-xs footer footer-content bg-base-300 text-base-content">
+        <div>
+            <p>© 2026 Chirper - Built with Laravel and ❤️. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
