@@ -22,8 +22,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-        if  (! Schema::hasTable('sessions')) {
-            Artisan::call('migrate', ['--force' => true]);
+        if (! app()->runningInConsole()){
+            try {
+                if  (! Schema::hasTable('sessions')) {
+                    Artisan::call('migrate', ['--force' => true]);
+                    }
+            } catch (\Throwable $e) {
+                //
+            }
         }
     }
 }
