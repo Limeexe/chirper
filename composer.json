@@ -58,6 +58,7 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
+            "@php artisan package:discover --ansi",
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
             "@php artisan boost:update --ansi"
         ],
